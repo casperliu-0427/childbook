@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casper 的友善故事</title>
   <style>
     * {
@@ -13,12 +13,11 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
-      background-color: #f0f8ff;
+      background-color: #fefefe;
       color: #333;
     }
     header {
-      background-color: #4a90e2;
-      color: white;
+      background-color: #88c9bf;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -26,7 +25,8 @@
       flex-wrap: wrap;
     }
     header h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      color: white;
     }
     nav {
       margin-top: 0.5rem;
@@ -37,51 +37,36 @@
       margin-left: 1rem;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
     .container {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     .scene {
       margin-bottom: 3rem;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
     }
     .scene img {
       width: 100%;
       height: auto;
-      display: block;
-    }
-    .scene-content {
-      padding: 1.5rem;
-    }
-    .scene-content h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: #4a90e2;
-    }
-    .scene-content p {
-      font-size: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 1rem;
     }
     footer {
-      background-color: #333;
-      color: white;
+      background-color: #88c9bf;
       text-align: center;
+      color: white;
       padding: 1rem;
       margin-top: 3rem;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-      nav {
-        margin-top: 1rem;
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
       }
     }
   </style>
@@ -90,57 +75,81 @@
   <header>
     <h1>Casper 的友善故事</h1>
     <nav>
-      <a href="#scene1">場景1</a>
-      <a href="#scene2">場景2</a>
-      <a href="#scene3">場景3</a>
-      <a href="#scene4">場景4</a>
-      <a href="#scene5">場景5</a>
-      <a href="#scene6">場景6</a>
-      <a href="#scene7">場景7</a>
-      <a href="#scene8">場景8</a>
-      <a href="#scene9">場景9</a>
-      <a href="#scene10">場景10</a>
+      <a href="#scene1">場景一</a>
+      <a href="#scene2">場景二</a>
+      <a href="#scene3">場景三</a>
+      <a href="#scene4">場景四</a>
+      <a href="#scene5">場景五</a>
     </nav>
   </header>
 
-  <div class="container">
-    <!-- Scene Blocks -->
-    <!-- 可將 image1.jpg ~ image10.jpg 放在同一資料夾下 -->
-    ${[...Array(10)].map((_, i) => `
-    <section class="scene" id="scene${i + 1}">
-      <img src="image${i + 1}.jpg" alt="Casper Scene ${i + 1}" />
-      <div class="scene-content">
-        <h2>場景 ${i + 1}</h2>
-        <p>${getSceneText(i + 1)}</p>
-      </div>
+  <main class="container">
+    <section class="scene" id="scene1">
+      <h2>場景一</h2>
+      <p>在森林裡，有一隻叫做 Casper 的小狐狸，他非常喜歡交朋友。</p>
+      <img src="image1.jpg" alt="場景一圖片">
     </section>
-    `).join('')}
-  </div>
+    <section class="scene" id="scene2">
+      <h2>場景二</h2>
+      <p>有一天，Casper 遇見了一隻正在哭泣的小兔子。他走上前說：「妳還好嗎？」</p>
+      <img src="image2.jpg" alt="場景二圖片">
+    </section>
+    <section class="scene" id="scene3">
+      <h2>場景三</h2>
+      <p>小兔子說她找不到回家的路了。Casper 決定幫助她。</p>
+      <img src="image3.jpg" alt="場景三圖片">
+    </section>
+    <section class="scene" id="scene4">
+      <h2>場景四</h2>
+      <p>他們一起問了貓頭鷹先生，貓頭鷹指了一條小徑給他們。</p>
+      <img src="image4.jpg" alt="場景四圖片">
+    </section>
+    <section class="scene" id="scene5">
+      <h2>場景五</h2>
+      <p>路上他們經過一條河流，Casper 用石頭鋪了一座小橋讓小兔子通過。</p>
+      <img src="image5.jpg" alt="場景五圖片">
+    </section>
+    <section class="scene" id="scene6">
+      <h2>場景六</h2>
+      <p>終於，他們看到小兔子的家。她開心地跳了起來！</p>
+      <img src="image6.jpg" alt="場景六圖片">
+    </section>
+    <section class="scene" id="scene7">
+      <h2>場景七</h2>
+      <p>小兔子的媽媽很感謝 Casper，還邀請他們一起吃紅蘿蔔蛋糕。</p>
+      <img src="image7.jpg" alt="場景七圖片">
+    </section>
+    <section class="scene" id="scene8">
+      <h2>場景八</h2>
+      <p>他們在花園裡玩了整個下午。</p>
+      <img src="image8.jpg" alt="場景八圖片">
+    </section>
+    <section class="scene" id="scene9">
+      <h2>場景九</h2>
+      <p>太陽下山了，Casper 跟小兔子道別，踏上回家的路。</p>
+      <img src="image9.jpg" alt="場景九圖片">
+    </section>
+    <section class="scene" id="scene10">
+      <h2>場景十</h2>
+      <p>從那天起，他們成為了最好的朋友，常常一起冒險、一起笑。</p>
+      <img src="image10.jpg" alt="場景十圖片">
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Casper 故事網. 友善從日常做起。</p>
+    <p>© 2025 Casper 的故事書 | 版權所有</p>
   </footer>
 
   <script>
-    function getSceneText(index) {
-      const messages = [
-        "Casper早晨醒來，微笑迎接新的一天。每一天都是新的開始，充滿希望與快樂。",
-        "Casper在花園裡看到鳥兒和蝴蝶，溫柔地打招呼。善待自然，是友善的一種表現。",
-        "在學校看到同學跌倒，Casper立刻上前幫忙。善行能在他人需要時給予支持。",
-        "Casper與朋友玩耍時，發現有位朋友沒有玩具，便分享自己的玩具。",
-        "Casper撿到一隻走失的小狗，帶回家幫牠找主人，展現對生命的關懷。",
-        "Casper和朋友們在草地上輪流玩耍，確保每個人都能參與。公平與包容讓大家開心。",
-        "Casper看到一位老婆婆提著重物，立刻上前幫忙，展現對長輩的尊重與關懷。",
-        "放學回家路上，Casper幫助一位年幼的小朋友。助人為樂，讓世界更美好。",
-        "晚餐時，Casper與家人分享今天的故事，傾聽與表達彼此的感受。",
-        "睡前，Casper回顧今天的善行，心中充滿喜悅。反思與感恩，迎向更好的明天。"
-      ];
-      return messages[index - 1] || "";
-    }
-
-    document.querySelectorAll('.scene-content p').forEach((p, i) => {
-      p.textContent = getSceneText(i + 1);
+    // 導覽列平滑捲動效果
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
     });
   </script>
 </body>
 </html>
+
